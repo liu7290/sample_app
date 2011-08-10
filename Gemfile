@@ -14,6 +14,17 @@ end
 group :test do
   gem 'rspec', '2.0.1'
   gem 'webrat', '0.7.1'
+  gem 'spork', '0.8.5'
+end
+
+gem 'cucumber-rails'
+gem 'autotest-standalone'
+gem 'autotest-rails-pure'
+gem 'zentest-without-autotest'
+
+if RUBY_PLATFORM.downcase.include?("darwin") # I'm on Mac
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
 end
 
 # Use unicorn as the web server
